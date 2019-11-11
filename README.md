@@ -39,28 +39,27 @@ Destroy
 
 Conditional creation
 --------------------
-This example can support the following creating kubernetes cluster scenario by setting different arguments.
+This example can support the following creating kubernetes cluster scenario.
 
-### 1. Create a new vpc, vswitch  for the cluster.
-
-You can specify the following user-defined arguments:
-
-* vpc_name: A new vpc name
-* vpc_cidr: A new vpc cidr block
-* vswitch_name: The name  of a vswitch
-* vswitch_cidr: The of cidr block for a new vswitch
-
-### 2. Using existing vpc and vswitch for the cluster.
+### 1. Retrieve existing vswitch by tags and name regex .
 
 You can specify the following user-defined arguments:
 
-* vpc_id: A existing vpc ID
-* vswitch_id: The of ID for an existing vswitch ID
+* vswitch_name_regex: A default filter applied to retrieve existing vswitches by name regex.
+* vswitch_tags: A default filter applied to retrieve existing vswitches by tags.
+* vswitch_resource_group_id: A default filter applied to retrieve existing vswitches by resource group id.
+
+### 2. Set existing vpc id and vswitch id for the cluster.
+
+You can specify the following user-defined arguments:
+
+* vpc_id: A existing vpc ID.
+* vswitch_id: The of ID for an existing vswitch ID.
 
 
 Terraform version
 -----------------
-Terraform version 0.11.0 or newer and Provider version 1.58.0 or newer are required for this example to work.
+Terraform version 0.12.0 or newer and Provider version 1.58.0 or newer are required for this example to work.
 
 Authors
 -------
