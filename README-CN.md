@@ -44,7 +44,7 @@ module "serverless-k8s" {
 
 作者
 -------
-Created and maintained by Meng Xiaobing(@menglingwei, menglingwei@gmail.com)
+Created and maintained by Alibaba Cloud Terraform Team(terraform@alibabacloud.com)
 
 许可
 ----
