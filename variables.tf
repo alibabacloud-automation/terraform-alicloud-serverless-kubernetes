@@ -9,6 +9,7 @@ variable "profile" {
   type        = string
   default     = ""
 }
+
 variable "shared_credentials_file" {
   description = "(Deprecated from version 1.1.0) This is the path to the shared credentials file. If this is not set and a profile is specified, $HOME/.aliyun/config.json will be used."
   type        = string
@@ -17,6 +18,18 @@ variable "shared_credentials_file" {
 
 variable "skip_region_validation" {
   description = "(Deprecated from version 1.1.0) Skip static validation of region ID. Used by users of alternative AlibabaCloud-like APIs or users w/ access to regions that are not public (yet)."
+  type        = bool
+  default     = false
+}
+
+variable "vswitch_id" {
+  description = "(Deprecated from version 1.2.0) An existing vswitch id. Use vswitch_ids instead."
+  type        = string
+  default     = ""
+}
+
+variable "private_zone" {
+  description = "(Deprecated from version 1.2.0) Whether to create internet eip for API Server. Use service_discovery_types instead."
   type        = bool
   default     = false
 }
@@ -31,7 +44,7 @@ variable "create" {
 variable "serverless_cluster_name" {
   description = "The cluster name used to create a new cluster"
   type        = string
-  default     = "tf-serverless-demo-0001"
+  default     = ""
 }
 
 variable "vpc_id" {
@@ -40,10 +53,10 @@ variable "vpc_id" {
   default     = ""
 }
 
-variable "vswitch_id" {
-  description = "An existing vswitch id."
-  type        = string
-  default     = ""
+variable "vswitch_ids" {
+  description = "The vswitches where new kubernetes cluster will be located."
+  type        = list(string)
+  default     = []
 }
 
 variable "new_nat_gateway" {
@@ -58,10 +71,10 @@ variable "deletion_protection" {
   default     = false
 }
 
-variable "private_zone" {
-  description = "Whether to create internet eip for API Server."
-  type        = bool
-  default     = false
+variable "service_discovery_types" {
+  description = "Service discovery type."
+  type        = list(string)
+  default     = ["PrivateZone"]
 }
 
 variable "endpoint_public_access_enabled" {
@@ -100,6 +113,12 @@ variable "force_update" {
   default     = false
 }
 
+variable "tags" {
+  description = "A map of tags assigned to the kubernetes cluster."
+  type        = map(string)
+  default     = {}
+}
+
 # Instance typs variables
 variable "cpu_core_count" {
   description = "CPU core count is used to fetch instance types."
@@ -112,14 +131,3 @@ variable "memory_size" {
   type        = number
   default     = 2
 }
-
-variable "tags" {
-  description = "A map of tags assigned to the kubernetes cluster."
-  type        = map(string)
-  default     = {}
-}
-
-
-
-
-

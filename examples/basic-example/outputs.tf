@@ -27,15 +27,15 @@ output "this_endpoint_public_access_enabled" {
 
 output "this_private_zone" {
   description = "The private zone of the kunernetes cluster."
-  value = module.serverless-k8s.this_private_zone
+  value       = module.serverless-k8s.this_private_zone
 }
 
 output "this_kube_config" {
   description = "The kube config of the kunernetes cluster."
-  value = module.serverless-k8s.this_kube_config
+  value       = module.serverless-k8s.this_kube_config
 }
 
 output "this_tags" {
   description = "The tags of the kunernetes cluster."
-  value = module.serverless-k8s.this_tags
+  value       = module.serverless-k8s.this_tags
 }

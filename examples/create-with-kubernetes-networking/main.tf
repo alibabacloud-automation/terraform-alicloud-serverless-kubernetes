@@ -25,7 +25,7 @@ provider "alicloud" {
 ###########################################
 
 module "kubernetes-networking" {
-  source = "terraform-alicloud-modules/kubernetes-networking/alicloud"
+  source             = "terraform-alicloud-modules/kubernetes-networking/alicloud"
   region             = var.region
   profile            = var.profile
   vpc_cidr           = var.vpc_cidr
