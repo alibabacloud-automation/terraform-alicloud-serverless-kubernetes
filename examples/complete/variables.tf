@@ -1,4 +1,4 @@
-// Kubernetes cluster setting
+# Kubernetes cluster setting
 variable "deletion_protection" {
   description = "Whether enable the deletion protection or not."
   type        = bool
