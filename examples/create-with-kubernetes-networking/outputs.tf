@@ -1,4 +1,4 @@
-// Output VPC
+# Output VPC
 output "this_vpc_id" {
   description = "The ID of the VPC."
   value       = module.serverless-k8s.this_vpc_id
@@ -9,7 +9,7 @@ output "this_vswitch_id" {
   value       = module.serverless-k8s.this_vswitch_id
 }
 
-// Output kubernetes resource
+# Output kubernetes resource
 output "this_cluster_id" {
   description = "ID of the kunernetes cluster."
   value       = module.serverless-k8s.this_cluster_id
@@ -33,9 +33,4 @@ output "this_private_zone" {
 output "this_kube_config" {
   description = "The kube config of the kunernetes cluster."
   value       = module.serverless-k8s.this_kube_config
-}
-
-output "this_tags" {
-  description = "The tags of the kunernetes cluster."
-  value       = module.serverless-k8s.this_tags
 }

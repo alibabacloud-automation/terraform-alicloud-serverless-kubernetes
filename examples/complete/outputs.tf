@@ -1,4 +1,4 @@
-// Output VPC
+# Output VPC
 output "this_vpc_id" {
   description = "The ID of the VPC."
   value       = module.example.this_vpc_id
@@ -9,7 +9,7 @@ output "this_vswitch_id" {
   value       = module.example.this_vswitch_id
 }
 
-// Output kubernetes resource
+# Output kubernetes resource
 output "this_cluster_id" {
   description = "ID of the kunernetes cluster."
   value       = module.example.this_cluster_id
