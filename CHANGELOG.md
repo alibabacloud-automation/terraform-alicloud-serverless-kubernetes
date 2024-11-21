@@ -1,4 +1,8 @@
-## 1.2.0 (Unreleased)
+## 2.1.0 (Unreleased)
+## 2.0.0 (November 21, 2024)
+
+- Module: remove deprecated attributes; examples: improve the examples [GH-8](https://github.com/alibabacloud-automation/terraform-alicloud-serverless-kubernetes/pull/8)
+
 ## 1.1.0 (December 10, 2021)
 
 ENHANCEMENTS:
