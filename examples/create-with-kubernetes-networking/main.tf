@@ -8,7 +8,7 @@ provider "alicloud" {
 
 module "kubernetes-networking" {
   source  = "terraform-alicloud-modules/kubernetes-networking/alicloud"
-  version = "1.3.0"
+  version = "2.0.0"
 
   vpc_cidr           = var.vpc_cidr
   availability_zones = var.availability_zones
